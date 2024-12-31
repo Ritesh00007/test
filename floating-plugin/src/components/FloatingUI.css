@@ -1,0 +1,68 @@
+.floating-container {
+    position: absolute; /* Changed from fixed to absolute for draggable */
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
+    cursor: move; /* Added cursor for dragging */
+  }  
+  
+  .floating-container.closed {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  .floating-container.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .floating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #0078d7;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .floating-header button {
+    background: white;
+    color: #0078d7;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .floating-header button:hover {
+    background: #005bb5;
+    color: white;
+  }
+  
+  .floating-content {
+    padding: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .floating-content button {
+    background: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .floating-content button:hover {
+    background: #005bb5;
+  }
+  
